@@ -9,3 +9,4 @@ num, name, lang = tupA
 print(num)
 print(name)
 print(lang)
+print(tupA[1])

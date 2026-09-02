@@ -1,25 +1,32 @@
-from sqlalchemy import true
+from sqlalchemy import false, true
 
 config = {"model": "gtp-4",
           "temparature": 0.7,
-          "max_tokens": 1000
+          "max_tokens": 1000,
+          "environment": {"dev": True, "prod": False},
           }
-print(config)
+# print(config)
 print(config["model"])
 config["stream"] = True
 config["user"] = "Sharath"
-del config["max_tokens"]
 print(config)
-for key, value in config.items():
-    print(f"{key} : {value}")
+del config["user"]
+print(config)
+
+# for key, value in config.items():
+#    print(f"{key}: {value}")
 
 print(config.get('notpresent', "Not Found"))
 
-keys = ["Sharath", "Prakash", "Vinay"]
-values = ["Python", "Java", "JS"]
-print(zip(keys, values))
+keys = ["sharath", "prakash", "vinay"]
+values = ["Python", "Java", "C++"]
+datalist = list(zip(keys, values))
+print(datalist)
+for key, value in datalist:
+    print(f"{key}: {value}")
+
 data = dict(zip(keys, values))
 print(data)
 
 for key, value in data.items():
-    print(f"{key} : {value}")
+    print(f"{key}: {value}")

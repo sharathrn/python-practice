@@ -4,3 +4,8 @@ s.update({100, 200, 300})
 print(s)
 s.pop()
 print(s)
+
+s.pop()
+print(s)
+s.pop()
+print(s)
