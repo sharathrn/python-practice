@@ -12,3 +12,14 @@ del config["max_tokens"]
 print(config)
 for key, value in config.items():
     print(f"{key} : {value}")
+
+print(config.get('notpresent', "Not Found"))
+
+keys = ["Sharath", "Prakash", "Vinay"]
+values = ["Python", "Java", "JS"]
+print(zip(keys, values))
+data = dict(zip(keys, values))
+print(data)
+
+for key, value in data.items():
+    print(f"{key} : {value}")
